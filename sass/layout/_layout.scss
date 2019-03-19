@@ -27,3 +27,24 @@ body{
     }
 }
 
+h1.entry-title{
+    color:white;
+        text-shadow: 2px 2px #3b96d3; 
+}
+
+span{
+    color:rgba(59, 150, 211, 0.5);
+}
+
+span.meta-nav{
+       text-shadow: 2px 2px rgba(59, 150, 211, 0.2);
+}
+
+div.wp-block-media-text__content p{
+	color:white;
+}
+
+p.site-title{
+    color:white;
+    text-shadow: 2px 2px rgba(59, 150, 211, 0.2);
+}
