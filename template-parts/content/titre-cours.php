@@ -15,10 +15,12 @@
 
 $sigle = substr(get_the_title(),0,7);
 $session = substr($sigle,4,1);
+$domaine = substr( get_the_title(), 5, 1);
 
 $titre = substr(get_the_title(),7);
 echo '<div class="entry-title'
  . ' session-' . $session
+ .' couleurParDomaine-'. $domaine
  . '  "><a href="'; 
 echo esc_url( get_permalink()) . '"';
 echo ' rel="bookmark"><h3>' . $sigle .'</h3><h4>' . $titre . '</h4></a></div>';
