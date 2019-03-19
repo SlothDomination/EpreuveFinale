@@ -3,8 +3,16 @@
 
 @keyframes anim1 {
     from {
-        transform: translateY(-100vh)  rotateX(0deg);
+        transform: translateY(-20vh)  rotateX(180deg);
          animation-timing-function: cubic-bezier(1, .01, .91, 1.7);
+    }
+
+    25%{
+        transform: translateY(8vh) rotateX(180deg);
+    }
+
+    50%{
+        transform: translateY(-12vh) rotateX(0deg);
     }
  
     100% {
@@ -52,14 +60,24 @@
 
 
 @keyframes anim3 {
-    0% {
-        animation-timing-function: cubic-bezier(1, .01, .91, 1.7);
-        transform: translateX(-100%) rotateX(50deg);
+    0%{
+        background: -webkit-linear-gradient(to left, white, blue, blue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: translateX(0%) scale(0.5, 0.5);
     }
 
-    100% {
-        transform: translateX(0) rotateX(50deg);
+    50%{
+        transform: translateX(0%) scale(2, 2);
     }
+    
+    100%{
+        background: white;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: translateX(0) scale(1, 1);
+    }
+
 }
 
 .site-header.featured-image {
@@ -68,15 +86,12 @@
 
 .anim1 {
     transform-origin: top center;
-    animation: anim1 2s, anim2 1s 2s  ;
+    animation: anim1 2s;
 
-    animation-fill-mode: forwards;
-    
+    animation-fill-mode: forwards;    
 }
 
 .anim3 {
-    // animation-fill-mode: forwards;
-    transform-origin: top center;
-    animation: anim3 1s forwards, anim2 1s 1s forwards;
-    animation-timing-function: cubic-bezier(1, .01, .91, 1.7);
+    animation: anim3 0.5s forwards;
+    animation-fill-mode: forwards;
 }

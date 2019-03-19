@@ -785,10 +785,18 @@ body.page .main-navigation {
 
 @-webkit-keyframes anim1 {
   from {
-    -webkit-transform: translateY(-100vh) rotateX(0deg);
-            transform: translateY(-100vh) rotateX(0deg);
+    -webkit-transform: translateY(-20vh) rotateX(180deg);
+            transform: translateY(-20vh) rotateX(180deg);
     -webkit-animation-timing-function: cubic-bezier(1, 0.01, 0.91, 1.7);
             animation-timing-function: cubic-bezier(1, 0.01, 0.91, 1.7);
+  }
+  25% {
+    -webkit-transform: translateY(8vh) rotateX(180deg);
+            transform: translateY(8vh) rotateX(180deg);
+  }
+  50% {
+    -webkit-transform: translateY(-12vh) rotateX(0deg);
+            transform: translateY(-12vh) rotateX(0deg);
   }
   100% {
     -webkit-transform: translateY(0) rotateX(0deg);
@@ -798,10 +806,18 @@ body.page .main-navigation {
 
 @keyframes anim1 {
   from {
-    -webkit-transform: translateY(-100vh) rotateX(0deg);
-            transform: translateY(-100vh) rotateX(0deg);
+    -webkit-transform: translateY(-20vh) rotateX(180deg);
+            transform: translateY(-20vh) rotateX(180deg);
     -webkit-animation-timing-function: cubic-bezier(1, 0.01, 0.91, 1.7);
             animation-timing-function: cubic-bezier(1, 0.01, 0.91, 1.7);
+  }
+  25% {
+    -webkit-transform: translateY(8vh) rotateX(180deg);
+            transform: translateY(8vh) rotateX(180deg);
+  }
+  50% {
+    -webkit-transform: translateY(-12vh) rotateX(0deg);
+            transform: translateY(-12vh) rotateX(0deg);
   }
   100% {
     -webkit-transform: translateY(0) rotateX(0deg);
@@ -893,27 +909,43 @@ body.page .main-navigation {
 
 @-webkit-keyframes anim3 {
   0% {
-    -webkit-animation-timing-function: cubic-bezier(1, 0.01, 0.91, 1.7);
-            animation-timing-function: cubic-bezier(1, 0.01, 0.91, 1.7);
-    -webkit-transform: translateX(-100%) rotateX(50deg);
-            transform: translateX(-100%) rotateX(50deg);
+    background: -webkit-linear-gradient(to left, white, blue, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transform: translateX(0%) scale(0.5, 0.5);
+            transform: translateX(0%) scale(0.5, 0.5);
+  }
+  50% {
+    -webkit-transform: translateX(0%) scale(2, 2);
+            transform: translateX(0%) scale(2, 2);
   }
   100% {
-    -webkit-transform: translateX(0) rotateX(50deg);
-            transform: translateX(0) rotateX(50deg);
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transform: translateX(0) scale(1, 1);
+            transform: translateX(0) scale(1, 1);
   }
 }
 
 @keyframes anim3 {
   0% {
-    -webkit-animation-timing-function: cubic-bezier(1, 0.01, 0.91, 1.7);
-            animation-timing-function: cubic-bezier(1, 0.01, 0.91, 1.7);
-    -webkit-transform: translateX(-100%) rotateX(50deg);
-            transform: translateX(-100%) rotateX(50deg);
+    background: -webkit-linear-gradient(to left, white, blue, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transform: translateX(0%) scale(0.5, 0.5);
+            transform: translateX(0%) scale(0.5, 0.5);
+  }
+  50% {
+    -webkit-transform: translateX(0%) scale(2, 2);
+            transform: translateX(0%) scale(2, 2);
   }
   100% {
-    -webkit-transform: translateX(0) rotateX(50deg);
-            transform: translateX(0) rotateX(50deg);
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transform: translateX(0) scale(1, 1);
+            transform: translateX(0) scale(1, 1);
   }
 }
 
@@ -925,18 +957,16 @@ body.page .main-navigation {
 .anim1 {
   -webkit-transform-origin: top center;
           transform-origin: top center;
-  -webkit-animation: anim1 2s, anim2 1s 2s;
-          animation: anim1 2s, anim2 1s 2s;
+  -webkit-animation: anim1 2s;
+          animation: anim1 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .anim3 {
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
-  -webkit-animation: anim3 1s forwards, anim2 1s 1s forwards;
-          animation: anim3 1s forwards, anim2 1s 1s forwards;
-  -webkit-animation-timing-function: cubic-bezier(1, 0.01, 0.91, 1.7);
-          animation-timing-function: cubic-bezier(1, 0.01, 0.91, 1.7);
+  -webkit-animation: anim3 0.5s forwards;
+          animation: anim3 0.5s forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 /*# sourceMappingURL=style.css.map */
